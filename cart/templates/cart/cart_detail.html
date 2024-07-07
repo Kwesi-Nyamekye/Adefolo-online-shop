@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'cart/cart_detail.css' %}">
     <h1>Your shopping cart</h1>
     <table class="cart">
         <thead>
@@ -23,16 +24,23 @@
                 {% with product=item.product %}
                     <tr>
                         <td>
-                            <a href="{{ product.category.get_absolute_url }}">
-                                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'cart/images/no_image.png' %}{% endif %}">
+                            <a href="{{ product.get_absolute_url }}">
+                                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'cart/images/no_image.png' %}{% endif %}" alt="{{ product.name }}">
                             </a>
                         </td>
                         <td>{{ product.name }}</td>
-                        <td>{{ item.quantity }}</td>
+                        <td>
+                            <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                                {{ item.update_quantity_form.quantity }}
+                                {{ item.update_quantity_form.override }}
+                                {% csrf_token %}
+                                <input type="submit" value="Update">
+                            </form>
+                        </td>
                         <td>
                             <form action="{% url 'cart:cart_remove' product.id %}" method="post">
-                                <input type="submit" value="Remove">
                                 {% csrf_token %}
+                                <input type="submit" value="Remove">
                             </form>
                         </td>
                         <td class="num">${{ item.price }}</td>
@@ -43,12 +51,12 @@
             <tr class="total">
                 <td colspan="4"></td>
                 <td class="num">Total:</td>
-                <td class="num">${{ cart.get_total_price }}</td> 
+                <td class="num">${{ cart.get_total_price }}</td>
             </tr>
         </tbody>
     </table>
     <p class="text-right">
         <a href="{% url 'shop:product_list' %}" class="button light">Continue Shopping</a>
-        <a href="#" class="button">Checkout</a>
+        <a href="{% url 'orders:order_create' %}" class="button">Checkout</a>
     </p>
 {% endblock %}

@@ -1,0 +1,79 @@
+/* Cart table */
+.cart {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart th,
+.cart td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.cart th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333333;
+}
+
+.cart td.num {
+    text-align: right;
+    font-weight: bold;
+    color: #555555;
+}
+
+.cart img {
+    max-width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center align images */
+}
+
+.cart .total {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333333;
+}
+
+.cart .total td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.cart .text-right {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.cart .button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.cart .button.light {
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.cart .button:hover {
+    background-color: #0056b3;
+}
+
+.cart .button.light:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+    border: 1px solid #0056b3;
+}
