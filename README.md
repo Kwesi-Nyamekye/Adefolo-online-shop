@@ -1,1 +1,1 @@
-# Adefolo-online-shop
+# An E commerce app
