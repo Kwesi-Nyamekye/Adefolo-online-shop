@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Shop{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'shop/base.css' %}">
+    <link rel="stylesheet" href="{% static 'shop/product_list.css' %}">
+    <!-- Include pagination.css here -->
+    <link rel="stylesheet" href="{% static 'shop/pagination.css' %}">
+</head>
+<body>
+    <div class="pagination">
+        <span class="step-links">
+            {% if products_paginated.has_previous %}
+                <a href="?page={{ products_paginated.previous_page_number }}">Previous</a>
+            {% endif %}
+            <span class="current">
+                Page {{ products_paginated.number }} of {{ products_paginated.paginator.num_pages }}.
+            </span>
+            {% if products_paginated.has_next %}
+                <a href="?page={{ products_paginated.next_page_number }}">Next</a>
+            {% endif %}
+        </span>
+    </div>
+</body>
+</html>

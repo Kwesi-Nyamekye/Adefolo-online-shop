@@ -1,0 +1,37 @@
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination .step-links {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.pagination .step-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .step-links a:hover {
+    background-color: #e9ecef;
+}
+
+.pagination .step-links .current {
+    font-weight: bold;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination .step-links .current:hover {
+    background-color: #0056b3;
+    cursor: default;
+}

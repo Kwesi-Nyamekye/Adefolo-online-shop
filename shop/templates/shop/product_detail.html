@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'shop/product_detail.css' %}">
     <div class="product-detail">
         <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "shop/images/no_image.png" %}{% endif %}">
         <h1>{{ product.name }}</h1>
@@ -14,12 +15,14 @@
                 {{ product.category }}
             </a>
         </h2>
-        <p class="price">${{ product.price }}</p>
-        <form action="{% url "cart:cart-add" product.id %}" method="post">
+
+        <p class="price">{{ product.price }} cedis</p>
+        <form action="{% url 'cart:cart_add' product.id %}" method="post">
             {{ cart_product_form }}
-            {{ csrf_token }}
+            {% csrf_token %}
             <input type="submit" Value="Add to cart">
         </form>
-        <p>{{ product.description|linebreaks }}</p>
+        {{ product.description|linebreaks }}
     </div>
+    
 {% endblock %}

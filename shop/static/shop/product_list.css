@@ -1,0 +1,229 @@
+/* Reset box-sizing and defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cantora+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Base font family and styles */
+html, body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text */
+}
+
+/* General styles for headings */
+h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: #333; /* Dark gray for headings */
+}
+
+/* Header section */
+#subheader {
+    background-color: #e48900; /* Orange background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#subheader .logo {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Cart section */
+.cart {
+    float: right;
+    padding: 10px;
+    color: #ffffff; /* White text */
+}
+
+.cart a {
+    text-decoration: none;
+    color: #ffffff; /* White links */
+    font-weight: bold;
+}
+
+.cart a:hover {
+    color: #cf79f1; /* Light purple on hover */
+}
+
+/* Content area */
+#content {
+    padding: 20px;
+    margin: 20px auto; /* Center content and add margin */
+    max-width: 1200px; /* Limit content width */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Sidebar */
+#sidebar {
+    float: left;
+    width: 20%;
+    margin-right: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#sidebar h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333; /* Dark gray text */
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    margin-bottom: 10px;
+}
+
+#sidebar ul li a {
+    color: #555; /* Darker gray text */
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#sidebar ul li a:hover {
+    background-color: #e5e5e5; /* Light gray background on hover */
+}
+
+#sidebar ul li.selected {
+    background-color: #007bff; /* Blue background for selected item */
+}
+
+#sidebar ul li.selected a {
+    color: white; /* White text for selected item */
+}
+
+/* Main content */
+#main {
+    float: left;
+    width: 75%;
+}
+
+.product-list {
+    margin-top: 20px;
+}
+
+.product-list h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333; /* Dark gray text */
+}
+
+.item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.item a {
+    text-decoration: none;
+    color: #333; /* Dark gray text */
+    display: block;
+}
+
+.item a:hover {
+    text-decoration: underline;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.item .price {
+    font-weight: bold;
+    color: #007bff; /* Blue price */
+}
+
+/* Pagination */
+.pagination {
+    clear: both;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination .step-links {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #f2f2f2; /* Light gray background */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pagination .step-links a {
+    text-decoration: none;
+    color: #333; /* Dark gray text */
+    transition: background-color 0.3s ease;
+}
+
+.pagination .step-links a:hover {
+    background-color: #e5e5e5; /* Light gray background on hover */
+}
+
+.pagination .step-links .current {
+    font-weight: bold;
+}
+
+/* Footer section */
+footer {
+    background-color: #e48900; /* Orange background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    #subheader {
+        padding: 10px 5%; /* Reduced padding */
+    }
+    
+    #content {
+        padding: 10px;
+    }
+    
+    .cart {
+        float: none;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #sidebar {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #main {
+        width: 100%;
+    }
+}
