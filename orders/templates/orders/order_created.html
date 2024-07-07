@@ -1,0 +1,23 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+    Thank you
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'orders/order_created.css' %}">
+    <h1>Order Created</h1>
+    <p>Thank you! Your order has been successfully created. Your order number is <strong>{{ order.id }}</strong>.</p>
+
+    <h2>Order Details</h2>
+    <p>Order Date: {{ order.created }}</p>
+    <p>Total: ${{ order.get_total_cost }} cedis</p>
+
+    <h2>Order Items</h2>
+    <ul>
+        {% for item in order.items.all %}
+            <li>{{ item.product.name }} ({{ item.quantity }}) - ${{ item.price }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

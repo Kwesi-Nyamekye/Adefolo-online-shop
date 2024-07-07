@@ -1,0 +1,95 @@
+/* Base Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Content Container */
+.content-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* Paragraphs */
+p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Strong Text */
+strong {
+    color: #333;
+}
+
+/* Order Details */
+.order-details, .order-items {
+    margin-top: 20px;
+}
+
+.order-details p, .order-items li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-items li {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+}
+
+.order-items li span {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Button */
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
