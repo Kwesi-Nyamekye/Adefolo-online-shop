@@ -1,0 +1,15 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}Payment successful{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'payment/done.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="payment-successful-container">
+    <h1>Your Payment Was Successful</h1>
+    <p class="payment-message">Your payment has been processed successfully.</p>
+  </div>
+{% endblock %}

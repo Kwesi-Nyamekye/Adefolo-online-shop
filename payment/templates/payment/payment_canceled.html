@@ -1,0 +1,15 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}Payment canceled{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" type="text/css" href="{% static 'payment/canceled.css' %}">
+{% endblock %}
+
+{% block content %}
+  <div class="payment-canceled-container">
+    <h1>Your Payment Has Not Been Processed</h1>
+    <p class="cancel-message">There was a problem processing your payment.</p>
+  </div>
+{% endblock %}

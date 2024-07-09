@@ -1,0 +1,25 @@
+/* payment_successful.css */
+
+.payment-successful-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-successful-container h1 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+  }
+  
+  .payment-successful-container .payment-message {
+    font-size: 1.2em;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
